@@ -1,0 +1,10 @@
+---
+- name: update server gcp
+  hosts: "*"
+  become: true
+  tasks:
+    - name: Patch the system
+      package:
+        name: "*"
+        state: latest
+      register: patches
